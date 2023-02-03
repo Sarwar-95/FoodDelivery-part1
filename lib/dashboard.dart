@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -13,7 +15,7 @@ class _foodDeliveryState extends State<foodDelivery> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightGreen,
+      backgroundColor: Colors.deepPurple,
       //==============(APP BAR)===================
       appBar: AppBar(
         elevation: 0,
@@ -21,23 +23,28 @@ class _foodDeliveryState extends State<foodDelivery> {
           "Food Delivey",
           style: TextStyle(
             color: Colors.black,
-            fontSize: 20,
+            fontSize: 25,
           ),
         ),
-        
         backgroundColor: Colors.transparent,
         actions: [
           IconButton(
             onPressed: () {},
             icon: Icon(Icons.notifications_none),
             color: Colors.black,
-            iconSize: 20,
+            iconSize: 30,
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.shopping_cart),
+            icon: Icon(Icons.card_giftcard),
             color: Colors.black,
-            iconSize: 20,
+            iconSize: 30,
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.search),
+            color: Colors.black,
+            iconSize: 30,
           ),
         ],
       ),
@@ -87,12 +94,306 @@ class Body extends StatelessWidget {
               ),
             ),
             //-----------------------------------
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 250),
+              child: Text(
+                "Cuisines",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            //-----------------------------------
+            Container(
+              height: 280,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        height: 105,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          color: Colors.white12,
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://butteroverbae.com/wp-content/uploads/2020/10/karachi-chicken-biryani-11.jpg",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Cuisines(
+                        text: "Biryani",
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        height: 105,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          color: Colors.white12,
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://image.jimcdn.com/app/cms/image/transf/none/path/se48ad1dac4ec41e6/image/id26cda717803ad0a/version/1446263468/image.jpg",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Cuisines(
+                        text: "Pizza",
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        height: 105,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          color: Colors.white12,
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://offloadmedia.feverup.com/secretlosangeles.com/wp-content/uploads/2020/05/22093453/montys-e1590707262192.jpg",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Cuisines(
+                        text: "Burgers",
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        height: 105,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          color: Colors.white12,
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://www.nicepng.com/png/detail/10-108300_coffee-png-coffee-cafe-hot-coffee-coffee-cream.png",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Cuisines(
+                        text: "Cafe",
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        height: 105,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          color: Colors.white12,
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://bigoven-res.cloudinary.com/image/upload/t_recipe-1280/the-best-baked-chicken-legs-729a11.jpg",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Cuisines(
+                        text: "Chicken",
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        height: 105,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          color: Colors.white12,
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://www.healthygffamily.com/wp-content/uploads/2019/02/EBB27FFD-702B-4CE1-AA6D-A32A2333CE78-scaled.jpg",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Cuisines(
+                        text: "Pasta",
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        height: 105,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          color: Colors.white12,
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://www.bundabergnow.com/wp-content/uploads/2021/03/Dessert-Eton-Mess-537467632-SML-1920x1282.jpg",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Cuisines(
+                        text: "Desert",
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        height: 105,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          color: Colors.white12,
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://tennislifemag.com/wp-content/uploads/2019/02/EaHG2gTVcAAXQSp.jpg",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Cuisines(
+                        text: "Snack",
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        height: 105,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          color: Colors.white12,
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "http://www.mykusinamasterrecipes.com/wp-content/uploads/2016/07/Beef-Kebab.jpg",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Cuisines(
+                        text: "Kebab",
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        height: 105,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          color: Colors.white12,
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "http://chooschia.s3.amazonaws.com/2015/10/IMG_0284.jpg",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Cuisines(
+                        text: "Soups",
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
 
+            //=====================================================
             SizedBox(
               height: 20,
             ),
 
             MoreItem(),
+
+            //=====================================================
+
+            // SizedBox(
+            //   height: 10,
+            // ),
+            Padding(
+              padding: const EdgeInsets.only(right: 167),
+              child: Text(
+                "Your daily deals",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
 
             Container(
               height: 190,
@@ -174,8 +475,43 @@ class textBar extends StatelessWidget {
     );
   }
 }
+//======================== Cuisines ==============================
 
-//======================== More Item (2)===========================
+class Cuisines extends StatelessWidget {
+  final String text;
+  const Cuisines({super.key, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        // Container(
+        //   height: 105,
+        //   width: 110,
+        //   decoration: BoxDecoration(
+        //     color: Colors.white12,
+        //     borderRadius: BorderRadius.circular(20),
+        //     image: DecorationImage(
+        //       image: NetworkImage(
+        //         "https://butteroverbae.com/wp-content/uploads/2020/10/karachi-chicken-biryani-11.jpg",
+        //       ),
+        //       fit: BoxFit.cover,
+        //     ),
+        //   ),
+        // ),
+        Center(
+          child: Text(
+            text,
+            style: TextStyle(
+                fontSize: 15, color: Colors.black, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+//======================= More Item (2)===========================
 class MoreItem extends StatelessWidget {
   //final Image img;
   const MoreItem({
@@ -249,7 +585,17 @@ class MoreItem extends StatelessWidget {
 
 //================= Card (3)=================
 class Card extends StatelessWidget {
-  const Card({super.key});
+  //final AssetImage circleImg;
+  Card({
+    super.key,
+  });
+
+  var ImgList = [
+    {"img": "images/one.jpg"},
+    {"img": "images/two.jpg"},
+    {"img": "images/three.jpg"},
+    {"img": "images/five.jpg"},
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -261,7 +607,7 @@ class Card extends StatelessWidget {
           width: 166,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
-              color: Colors.greenAccent[100],
+              color: Colors.deepPurpleAccent[100],
               boxShadow: [
                 BoxShadow(
                     color: Colors.lightBlue,
@@ -273,8 +619,10 @@ class Card extends StatelessWidget {
             child: ListView(
               children: [
                 CircleAvatar(
+                  //child: circleImg,
+
                   radius: 50,
-                  backgroundImage: AssetImage("images/five.jpg"),
+                  backgroundImage: AssetImage(ImgList[0]["img"]!),
                 ),
                 SizedBox(
                   height: 5,
@@ -290,7 +638,7 @@ class Card extends StatelessWidget {
                   "Royal Kitchen",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: Colors.grey, fontWeight: FontWeight.bold),
+                      color: Colors.white70, fontWeight: FontWeight.bold),
                 ),
                 //---------------------------------------------------
                 Row(
@@ -298,17 +646,17 @@ class Card extends StatelessWidget {
                   children: [
                     Icon(
                       Icons.star,
-                      color: Colors.pinkAccent,
+                      color: Colors.yellow,
                       size: 15,
                     ),
                     Icon(
                       Icons.star,
-                      color: Colors.pinkAccent,
+                      color: Colors.yellow,
                       size: 15,
                     ),
                     Icon(
                       Icons.star,
-                      color: Colors.pinkAccent,
+                      color: Colors.yellow,
                       size: 15,
                     ),
                     Icon(
@@ -327,4 +675,4 @@ class Card extends StatelessWidget {
   }
 }
 
-//
+//=================================================
